@@ -1,29 +1,26 @@
 import { createContext, useEffect, useState } from "react";
 const AmenitiesContext = createContext();
 
-export function AmenitiesProvider({ children }) {
+export function AmenitiesProvider({ children, data }) {
   const [parentData, setParentData] = useState(null);
   const [childData, setChildData] = useState(null);
   const [page, setPage] = useState(1); //Pagina seleccionada (De la lista de amenidades)
   const [amenityParentId, setAmenityParentId] = useState(1); //Pagina seleccionada (De la lista de amenidades)
 
-  //Fetching el api de amenidades parent
+  //Fetching el api de amenidades parent a traves de Next Route Api
   useEffect(() => {
     async function fetchData() {
-      fetch(`http://54.177.198.128:8001/api/cat-amenities-parents/?format=json`)
-        .then((res) => res.json())
-        .then((data) => setParentData(data))
-        .catch((err) => console.log(err.message));
+      const res = await fetch(`/api/parents`);
+      const data = await res.json();
+      return setParentData(data);
     }
     fetchData();
   }, []);
 
-  // Fetching el api de amenidades child
+  // Fetching el api de amenidades child a traves de Next Route Api
   useEffect(() => {
     async function fetchChildData() {
-      fetch(
-        `http://54.177.198.128:8001/api/cat-amenities-childs/?format=json&page=${page}&amenity_parent_id=${amenityParentId}`
-      )
+      fetch(`/api/amenities/${page}/?amenity_parent=${amenityParentId}`)
         .then((res) => res.json())
         .then((data) => {
           // Guarda la informacion child en state

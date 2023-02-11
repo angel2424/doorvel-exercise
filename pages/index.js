@@ -18,7 +18,7 @@ export default function Home() {
       <div className={styles.main}>
         <h1>Amenidades</h1>
         <div className={styles.amenities_cards}>
-          {parentData?.data.map((amenity) => (
+          {parentData?.data?.map((amenity) => (
             <AmenitiesCard
               key={amenity.id}
               title={amenity.name}

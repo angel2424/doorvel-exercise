@@ -15,7 +15,8 @@
     "@mui/material": "^5.11.8",
     "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "superagent": "^8.0.9"
   },
   "devDependencies": {
     "eslint": "8.34.0",
