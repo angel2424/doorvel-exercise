@@ -10,7 +10,9 @@ export function AmenitiesProvider({ children }) {
   //Fetching el api de amenidades parent
   useEffect(() => {
     async function fetchData() {
-      fetch(`http://54.177.198.128:8001/api/cat-amenities-parents/?format=json`)
+      fetch(
+        `https://localhost:3000/?url=http://54.177.198.128:8001/api/cat-amenities-parents/?format=json`
+      )
         .then((res) => res.json())
         .then((data) => setParentData(data))
         .catch((err) => console.log(err.message));
