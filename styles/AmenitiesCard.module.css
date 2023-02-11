@@ -1,0 +1,17 @@
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  transition: ease 0.2s;
+}
+
+.card_container:hover {
+  transform: scale(1.01);
+}
+
+.card_content {
+  padding: 30px;
+}
+
+.card_title {
+  font-weight: 700;
+}

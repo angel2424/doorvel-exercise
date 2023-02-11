@@ -1,0 +1,10 @@
+.data_notFound {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+}
+
+.notFound_button {
+  color: #063f37 !important;
+  padding: 20px 30px !important;
+}

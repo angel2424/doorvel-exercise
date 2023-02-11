@@ -1,0 +1,20 @@
+.amenityItem_card {
+  transition: ease 0.2s;
+}
+
+.amenityItem_card:hover {
+  transform: scale(1.02);
+}
+
+.amenityItem_link {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.amenityItem_title {
+  font-weight: 600;
+}

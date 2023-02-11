@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.amenityList_title {
+  margin-bottom: 50px;
+}
+
+.amenityChilds_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.pagination {
+  margin-top: 80px;
+}
+
+.amenityList_pagination button {
+  color: #000;
+}
