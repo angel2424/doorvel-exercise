@@ -6,5 +6,5 @@ export default async function handler(req, res) {
     .then((data) => data)
     .catch((err) => console.log(err.message));
 
-  res.status(200).json(resData);
+  res.json(resData);
 }
