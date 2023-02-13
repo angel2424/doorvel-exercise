@@ -22,7 +22,6 @@ export default function Home() {
             <AmenitiesCard
               key={amenity.id}
               title={amenity.name}
-              link={amenity.id}
               id={amenity.id}
               img={`https://res.cloudinary.com/dpnv2uar8/image/upload/v1676095481/image_${amenity.id}.jpg`}
             />
